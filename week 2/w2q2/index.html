@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Form validation</title>
+	</head>
+	<body>
+		<form id="Form" action="#" novalidate>
+
+			<label for="text">Text</label><br>
+			<input type="text" name="text" data-error="Wprowadź poprawny tekst"></input><br>
+
+			<label for="email">Email</label><br>
+			<input type="email" name="email" data-error="Wprowadź poprawny e-mail"></input><br>
+
+			<label for="number">Number</label><br>
+			<input type="number" name="number" data-error="Wprowadź poprawną liczbę"></input><br>
+
+			<label for="content">Content</label><br>
+			<textarea name="content" data-error="Wprowadź poprawną treść"></textarea><br>
+
+			<input type="submit"></input>
+		</form>
+
+		<script src="script.js"></script>
+	</body>
+</html>
