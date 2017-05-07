@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>AJAX & JSON</title>
+	</head>
+	<body>
+
+		<button name="button">Załaduj</button>
+
+		<script id="tpl" type="text/x-handlebars-template">
+			{{#each obj}}
+		 		<ul>
+			 		<li>Name: {{name}}</li>
+			 		<li>Username: {{username}}</li>
+			 		<li>Email: {{email}}</li>
+			 		<li>Phone: {{phone}}</li>
+				</ul>
+			{{/each}}
+		</script>
+
+
+		<div id="output">
+
+		</div>
+
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="handlebars.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
