@@ -13,8 +13,6 @@ function preloadImages(urls) {
 
   let p = new Promise(function(resolve, reject) {
 
-    var xhr = new XMLHttpRequest();
-
     for(let i = 0; i < length; i++) {
       let x = new Image();
       x.src = urls[i];
