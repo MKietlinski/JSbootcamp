@@ -10,18 +10,7 @@
   };
 
   function formatPrice(currency, outputx) {
-    let cur;
-    switch (currency) {
-      case "USD":
-        cur = window.currencies.USD;
-        break;
-      case "EUR":
-        cur = window.currencies.EUR;
-        break;
-      case "GBP":
-        cur = window.currencies.GBP;
-        break;
-    }
+    let cur = currencies[currency];
 
     return function output(strings, ...values) {
       let op = "";
@@ -33,7 +22,7 @@
 
         if(value !== undefined) {
           if(typeof value === "number") {
-            value *= cur;
+            value /= cur;
             op += value.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,') + " " + currency;
           } else {
             op += value;
